@@ -324,4 +324,5 @@ ul {
 
 .Toastify__toast {
   text-transform: capitalize;
+  background-color: #84a0ec;
 }
