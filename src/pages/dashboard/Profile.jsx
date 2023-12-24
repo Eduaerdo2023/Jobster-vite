@@ -3,6 +3,7 @@ import { FormRow } from "../../components"
 import Wrapper from "../../assets/wrappers/DashboardFormPage"
 import { useDispatch, useSelector } from "react-redux"
 import { toast } from "react-toastify"
+import { updateUser } from "../../features/user/userSlice"
 
 
 const Profile = () => {
@@ -15,12 +16,14 @@ const Profile = () => {
     location: user?.location || ''
   })
   const { name, email, lastName, location } = userData
-  const handleSubmit = () => {
-    email.preventDefault()
+  const handleSubmit = (e) => {
+    const { name, email, lastName, location } = userData
+    e.preventDefault()
     if (!name || !email || !lastName || !location) {
       toast.error('Please fill out all fields')
       return
     }
+    dispatch(updateUser(userData))
   }
   const handleChange = (e) => {
     const name = e.target.name

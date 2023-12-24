@@ -39,7 +39,7 @@ const [showLogout, setShowLogout] = useState(false)
               type='button'
               className='dropdown-btn'
               onClick={() => {
-                dispatch(logoutUser());
+                dispatch(logoutUser('Logout'));
               }}
             >logout</button>
           </div>
