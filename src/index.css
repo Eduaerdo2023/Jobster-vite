@@ -266,12 +266,13 @@ ul {
 }
 
 .loading {
-  width: 6rem;
-  height: 6rem;
-  border: 5px solid var(--grey-400);
-  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border: 5px dotted var(--grey-400);
+ 
   border-top-color: var(--primary-500);
-  animation: spinner 2s linear infinite;
+  animation: spinner 8s linear infinite;
+ 
 }
 .loading-center {
   margin: 0 auto;
