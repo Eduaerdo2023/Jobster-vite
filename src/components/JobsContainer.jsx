@@ -16,12 +16,13 @@ const JobsContainer = () => {
   useEffect(() => {
     dispatch(getAllJobs())
   }, [])
+  
   if (isLoading) {
     return (
       <Loading center />
     )
   }
-  if (jobs.length === 0) {
+  if (jobs.length === 0 && isLoading === true) {
     return (
       <Wrapper>
         <h2>No jobs to display...</h2>
@@ -35,7 +36,6 @@ const JobsContainer = () => {
       <h5>jobs info</h5>
       <div className="jobs">
         {jobs.map(job => {
-          console.log(job);
           return <Job key={job._id} {...job} />
         })}
       </div>

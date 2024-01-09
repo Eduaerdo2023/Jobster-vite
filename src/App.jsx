@@ -16,7 +16,6 @@ function App() {
             <ProtectedRoute>
               <SharedLayouts />
             </ProtectedRoute>
-
           }>
             <Route index element={<Stats />} />
             <Route path="all-jobs" element={<AllJobs />} />
@@ -27,7 +26,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        <ToastContainer position="top-center" />
+        <ToastContainer position="top-center"  autoClose={2000}/>
       </BrowserRouter>
 
     </>

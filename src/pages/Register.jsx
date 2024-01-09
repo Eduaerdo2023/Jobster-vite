@@ -50,14 +50,13 @@ const Register = () => {
     if (user) {
       setTimeout(() => {
         navigate('/')
-      }, 3000)
-
+      }, 2000)
     }
   }, [user]
   )
+  
   return (
     <Wrapper className='full-page'>
-
       <form className='form' onSubmit={onSubmit}>
         <Logo />
         <h3>{values.isMember ? 'Login' : 'Register'}</h3>

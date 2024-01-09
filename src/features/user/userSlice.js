@@ -35,8 +35,6 @@ export const updateUser = createAsyncThunk(
 )
 
 
-
-
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -46,7 +44,7 @@ const userSlice = createSlice({
     },
     logoutUser: (state, {payload} )=> {
       state.user = null
-      state.isSidebarOpen = false
+      state.isSidebarOpen = true
       removeUserFromLocalStorage()
       if(payload) {
         toast.success(payload)
@@ -62,6 +60,7 @@ const userSlice = createSlice({
         const { user } = payload
         state.isLoading = false
         state.user = user
+        
         addUserToLocalStorage(user)
         toast.success(`Hello there ${user.name}`)
       })
@@ -77,6 +76,7 @@ const userSlice = createSlice({
         const { user } = payload
         state.isLoading = false
         state.user = user
+       
         addUserToLocalStorage(user)
         toast.success(`Welcome back ${user.name}`)
       })

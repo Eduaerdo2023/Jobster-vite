@@ -16,14 +16,14 @@ const SmallSidebar = () => {
   }
   return (
     <Wrapper>
-      <div className={isSidebarOpen ? 'sidebar-container ' : 'sidebar-container show-sidebar'}>
+      <div className={isSidebarOpen ? 'sidebar-container show-sidebar ' : 'sidebar-container '}>
         <div className="content">
           <button className="close-btn" onClick={toogle}>
             <FaTimes />
           </button>
           <header>
             <Logo />
-            <NavLinks  toogleSideBar={toogle}/>
+            <NavLinks  toogle={toogle}/>
           </header>
         </div>
       </div>

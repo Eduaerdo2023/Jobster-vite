@@ -18,7 +18,7 @@ const initialState = {
   page: 1,
   stats: {},
   monthlyApplications: [],
-  ...initialFiltersState,
+ ...initialFiltersState,
 }
 
 const allJobsSlice = createSlice({

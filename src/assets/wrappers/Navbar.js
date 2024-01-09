@@ -22,7 +22,6 @@ const Wrapper = styled.nav`
     border-color: transparent;
     font-size: 1.75rem;
     color: var(--primary-500);
-    cursor: pointer;
     display: flex;
     align-items: center;
   }

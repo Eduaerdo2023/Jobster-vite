@@ -14,11 +14,12 @@ const initialState = {
   statusOptions: ['interview', 'declined', 'pending'],
   status: 'pending',
   isEditing: false,
-  editJob: ''
+  editJobId: ''
 }
 
 export const createJob = createAsyncThunk('job/createJob', async (job, thunkAPI) => {
   try {
+
     const resp = await customFetch.post('/jobs', job, {
       headers: {
         authorization: `Bearer ${thunkAPI.getState().user.user.token}`
@@ -27,7 +28,6 @@ export const createJob = createAsyncThunk('job/createJob', async (job, thunkAPI)
     thunkAPI.dispatch(clearValues())
     return resp.data
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.resp.data.msg)
     if (error.response.status === 401) {
       thunkAPI.dispatch(logoutUser())
       return thunkAPI.rejectWithValue('Unauthorized! Logging Out...')
@@ -41,7 +41,7 @@ const jobSlice = createSlice({
   initialState,
   reducers: {
     handleChange: (state, { payload: { name, value } }) => {
-      state[name] = value
+      state[name] = value   
     },
     clearValues: () => {
       return {...initialState, jobLocation: getUserFromLocalStorage()?.location || ''}

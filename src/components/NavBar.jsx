@@ -11,14 +11,11 @@ const [showLogout, setShowLogout] = useState(false)
   const { user } = useSelector(store => store.user)
   const dispatch = useDispatch()
 
-  const toogle = () => 
-  {dispatch(toogleSidebar())
-  }
 
   return (
     <Wrapper>
       <div className="nav-center">
-        <button type='button' className='toogle-btn' onClick={toogle}
+        <button type='button' className='toogle-btn toggle-pointer' onClick={()=>dispatch(toogleSidebar())}
         > <FaAlignLeft /> </button>
         <div>
           <Logo />
@@ -45,9 +42,6 @@ const [showLogout, setShowLogout] = useState(false)
           </div>
         </div>
       </div>
-
-
-
     </Wrapper>
   )
 }

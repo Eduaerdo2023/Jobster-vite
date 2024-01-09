@@ -7,14 +7,14 @@ const FormRow = ({ type, name, value, handleChange, labelText }) => {
         {labelText || name}
       </label>
       <input
-      id={name}
+        id={name}
         type={type}
         value={value}
         name={name}
         onChange={handleChange}
         className='form-input'
       />
-     
+
     </div>
   )
 }

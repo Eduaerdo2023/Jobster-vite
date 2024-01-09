@@ -21,8 +21,8 @@ const Wrapper = styled.aside`
   }
   .content {
     background: var(--white);
-    width: var(--fluid-width);
-    height: 95vh;
+    /* width: var(--fluid-width); */
+    height: 55vh;
     border-radius: var(--borderRadius);
     padding: 4rem 2rem;
     position: relative;
@@ -55,9 +55,11 @@ const Wrapper = styled.aside`
   }
   .nav-link:hover {
     color: var(--grey-900);
+    font-weight: bold;
   }
   .nav-link:hover .icon {
     color: var(--primary-500);
+    
   }
   .icon {
     font-size: 1.5rem;

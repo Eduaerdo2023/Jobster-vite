@@ -1,7 +1,7 @@
 import customFetch from "../../utils/axios";
 import { logoutUser } from "./userSlice";
 
-export const registerUserThunk = async(url, user,thunkAPI) => {
+export const registerUserThunk = async(url, user, thunkAPI) => {
   try {
     const resp = await customFetch.post(url, user)
     return resp.data

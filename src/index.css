@@ -312,6 +312,9 @@ ul {
 .coffee-info a {
   color: var(--primary-500);
 }
+.toggle-pointer {
+  cursor: pointer;
+}
 
 @media screen and (min-width: 992px) {
   .coffee-info {
@@ -325,5 +328,5 @@ ul {
 
 .Toastify__toast {
   text-transform: capitalize;
-  background-color: #84a0ec;
+  border-radius: 30px;
 }

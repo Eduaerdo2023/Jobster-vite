@@ -19,6 +19,7 @@ const AddJob = () => {
     isEditing,
     editJobId
   } = useSelector(store => store.job)
+  
   const { user } = useSelector(store => store.user)
 
   const dispatch = useDispatch()
@@ -72,7 +73,6 @@ const AddJob = () => {
           />
 
           <FormRowSelect
-
             name='status'
             value={status}
             handleChange={handleJobInput}
